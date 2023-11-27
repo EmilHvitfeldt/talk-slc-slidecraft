@@ -1,0 +1,10 @@
+title: Yule Theme
+author: Emil Hvitfeldt
+version: 1.0.0
+contributes:
+  format:
+    revealjs:
+      theme: [default, yule.scss]
+      width: 1280
+      height: 720
+      code-line-numbers: false

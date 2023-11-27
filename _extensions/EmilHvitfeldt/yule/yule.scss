@@ -1,0 +1,313 @@
+/*-- scss:defaults --*/
+
+$theme-white: #FFFFFF;
+
+/*-- scss:rules --*/
+
+@mixin background-full {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin background-left {
+  background-size: auto 125%, cover;
+  background-position: -6.5% 30%, center;
+  background-repeat: no-repeat;
+}
+
+@mixin background-right {
+  background-size: auto 125%, cover;
+  background-position: 110% 65%, center;
+  background-repeat: no-repeat;
+}
+
+@mixin white-text {
+  color: $theme-white;
+
+  h1, h2, h3 {
+    color: $theme-white;
+  }
+}
+
+.red {
+  @include white-text;
+
+ .slide-background-content {
+    background: url('../../../../../assets/red.png');
+    @include background-full;
+  }
+}
+
+.red1-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/1-full.svg'),
+      url('../../../../../assets/red.png');
+    @include background-full;
+  }
+}
+
+.red1-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/1-left.svg'),
+      url('../../../../../assets/red.png');
+    @include background-left;
+  }
+}
+
+.red1-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/1-right.svg'),
+      url('../../../../../assets/red.png');
+    @include background-right;
+  }
+}
+
+.red2-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/2-full.svg'),
+      url('../../../../../assets/red.png');
+    @include background-full;
+  }
+}
+
+.red2-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/2-left.svg'),
+      url('../../../../../assets/red.png');
+    @include background-left;
+  }
+}
+
+.red2-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/2-right.svg'),
+      url('../../../../../assets/red.png');
+    @include background-right;
+  }
+}
+
+.red3-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/3-full.svg'),
+      url('../../../../../assets/red.png');
+    @include background-full;
+  }
+}
+
+.red3-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/3-left.svg'),
+      url('../../../../../assets/red.png');
+    @include background-left;
+  }
+}
+
+.red3-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/3-right.svg'),
+      url('../../../../../assets/red.png');
+    @include background-right;
+  }
+}
+
+.red4-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/4-full.svg'),
+      url('../../../../../assets/red.png');
+    @include background-full;
+  }
+}
+
+.red4-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/4-left.svg'),
+      url('../../../../../assets/red.png');
+    @include background-left;
+  }
+}
+
+.red4-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/4-right.svg'),
+      url('../../../../../assets/red.png');
+    @include background-right;
+  }
+}
+
+.green {
+  @include white-text;
+
+ .slide-background-content {
+    background: url('../../../../../assets/green.png');
+    @include background-full;
+  }
+}
+
+.green1-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/1-full.svg'),
+      url('../../../../../assets/green.png');
+    @include background-full;
+  }
+}
+
+.green1-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/1-left.svg'),
+      url('../../../../../assets/green.png');
+    @include background-left;
+  }
+}
+
+.green1-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/1-right.svg'),
+      url('../../../../../assets/green.png');
+    @include background-right;
+  }
+}
+
+.green2-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/2-full.svg'),
+      url('../../../../../assets/green.png');
+    @include background-full;
+  }
+}
+
+.green2-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/2-left.svg'),
+      url('../../../../../assets/green.png');
+    @include background-left;
+  }
+}
+
+.green2-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/2-right.svg'),
+      url('../../../../../assets/green.png');
+    @include background-right;
+  }
+}
+
+.green3-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/3-full.svg'),
+      url('../../../../../assets/green.png');
+    @include background-full;
+  }
+}
+
+.green3-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/3-left.svg'),
+      url('../../../../../assets/green.png');
+    @include background-left;
+  }
+}
+
+.green3-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/3-right.svg'),
+      url('../../../../../assets/green.png');
+    @include background-right;
+  }
+}
+
+.green4-full {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/4-full.svg'),
+      url('../../../../../assets/green.png');
+    @include background-full;
+  }
+}
+
+.green4-left {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/4-left.svg'),
+      url('../../../../../assets/green.png');
+    @include background-left;
+  }
+}
+
+.green4-right {
+  @include white-text;
+
+ .slide-background-content {
+    background:
+      url('../../../../../assets/4-right.svg'),
+      url('../../../../../assets/green.png');
+    @include background-right;
+  }
+}

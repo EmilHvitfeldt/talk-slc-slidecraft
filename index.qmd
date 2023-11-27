@@ -1,0 +1,720 @@
+---
+format: 
+  yule-revealjs:
+    theme: [default, styles.scss]
+    code-copy: false
+    include-after-body: 
+      - "all-the-js-code.html"
+echo: false
+code-line-numbers: false
+revealjs-plugins:
+  - codewindow
+knitr:
+  opts_chunk: 
+    echo: true
+filters:
+  - snow
+---
+
+## {.center background-image="images/micheile-henderson.jpg"}
+
+::: {.titlebox style="text-align:center; font-size: 3em;"}
+
+[slidecrafting with quarto]{.adlery style="color:#320005;"}
+
+[Salt Lake City RUG]{style="font-size:0.75em;"}
+
+[November 27th, 2023]{style="font-size:0.5em;"}
+:::
+
+::: footer
+Photo by <a href="https://unsplash.com/@micheile?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">micheile henderson</a> on <a href="https://unsplash.com/photos/person-holding-brown-and-green-leaves-5PDMwMmY0R8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+## {.center .red1-full}
+
+::: columns
+::: {.column width="50%"}
+[What is [Quarto]{.blue}]{.r-fit-text} 
+:::
+
+::: {.column .fragment width="50%"}
+[Quarto]{.blue} is an
+
+open-source
+
+scientific and technical
+
+publishing system
+
+built on Pandoc.
+:::
+:::
+
+## [Quarto]{.blue} vs [R Markdown]{.teal} {.center .red1-right}
+
+<br>
+
+At its core, [Quarto]{.blue} is multilingual and independent of computational systems
+
+<br>
+
+Has expanded upon [R Markdown]{.teal} to add new languages and can add more in the future
+
+<br>
+
+Let’s bring [R Markdown]{.teal} to everybody!
+
+## {background-image="images/quarto-python.png"}
+
+## {background-image="images/quarto-r.png"}
+
+## {background-image="images/quarto-julia.png"}
+
+## {background-image="images/quarto-observable.png"}
+
+## {background-image="images/revealjs.png"}
+
+
+## [Quarto]{.blue} Revealjs Basics {.green1-right}
+
+::: columns
+::: {.column width="50%"}
+
+::: {.codewindow .quarto}
+index.qmd
+`````md
+---
+title: "Basic Revealjs"
+format: revealjs
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{{r}}
+1 + 1
+```
+`````
+:::
+
+:::
+
+::: {.column width="50%"}
+<br>
+<iframe class="slide-deck" src="basics.html"></iframe>
+:::
+:::
+
+::: {.fragment .advance-slide .basics1}
+:::
+
+::: {.fragment .advance-slide .basics2}
+:::
+
+::: {.fragment .advance-slide .basics3}
+:::
+
+## [Quarto]{.blue} Revealjs tricks {.green2-right}
+
+::: columns
+::: {.column width="50%"}
+
+::: {.codewindow .quarto}
+index.qmd
+`````md
+---
+title: "Tricky Revealjs"
+format: revealjs
+---
+
+## Columns
+
+::: columns
+::: {.column width="50%"}
+Columns
+
+Columns
+:::
+
+::: {.column width="50%"}
+Columns
+
+Columns
+:::
+:::
+
+## Absolute positioning
+
+![](images/oreo.png){.absolute top=200 left=0 width="350" height="300"}
+
+![](images/presto.png){.absolute top=50 right=50 width="250" height="450"}
+
+![](images/wiggles.png){.absolute bottom=0 right="30%" width="300" height="300"}
+
+## Centering {.center}
+
+Is normally super hard
+
+## {.center}
+
+[big text]{.r-fit-text}
+`````
+:::
+
+:::
+
+::: {.column width="50%"}
+<br>
+<iframe class="slide-deck" src="tricks.html"></iframe>
+:::
+:::
+
+::: {.fragment .advance-slide .tricks1}
+:::
+
+::: {.fragment .advance-slide .tricks2}
+:::
+
+::: {.fragment .advance-slide .tricks3}
+:::
+
+::: {.fragment .advance-slide .tricks4}
+:::
+
+## Colors and fonts {.red}
+
+::: {.fragment}
+![](images/pinterest.png){width="100%" fig-align="center"}
+:::
+
+## Color Constract Checker {.red}
+
+![](images/contrast.png){width="100%" fig-align="center"}
+
+::: footer
+<https://colourcontrast.cc/>
+:::
+
+## Google fonts {.red}
+
+![](images/google-fonts.png){width="100%" fig-align="center"}
+
+## Setting the theme - sass variables {.green}
+
+![](images/sass-variables.png){width="100%" fig-align="center"}
+
+::: footer
+<https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables>
+:::
+
+## {.green}
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: columns
+::: {.column width="50%"}
+
+::: {.codewindow .quarto}
+index.qmd
+`````md
+---
+format: 
+  revealjs:
+    theme: style.scss
+---
+`````
+:::
+
+::: {.codewindow .sass}
+style.scss
+
+<div>
+/\*\-\- scss:defaults \-\-\*/  
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Sail&display=swap');
+
+[$font-family-sans-serif]{.brown}: "Crimson Text";  
+
+[$presentation-font-size-root]{.brown}: 46px;
+
+[$link-color]{.brown}: #440033;
+
+::: {.fragment .advance-slide}
+[$bg-color]{.brown}: #B7D9F6;
+:::
+
+/\*\-\- scss:rules \-\-\*/  
+</div> 
+:::
+
+:::
+
+::: {.column width="50%"}
+
+<iframe class="slide-deck" src="sass.html"></iframe>
+
+:::
+:::
+
+## setting the palette {.green3-right}
+
+::: columns
+::: {.column width="50%"}
+::: {.codewindow .sass}
+styles.scss
+
+<div>
+[\$theme-purple]{.brown}: [#BF65C5]{style="background-color:#BF65C5; color:white;"};  
+[\$theme-blue]{.brown}: [#76AADB]{style="background-color:#76AADB; color:white;"};  
+[\$theme-teal]{.brown}: [#50847B]{style="background-color:#50847B; color:white;"};  
+[\$theme-cream]{.brown}: [#F5F5F5]{style="background-color:#F5F5F5;"};  
+[\$theme-dark-purple]{.brown}: [#1A1626]{style="background-color:#1A1626; color:white;"};  
+  
+[\$theme-yellow]{.brown}: [#FFD571]{style="background-color:#FFD571;"};  
+[\$theme-brown]{.brown}: [#a37100]{style="background-color:#a37100; color:white;"};  
+[\$theme-pink]{.brown}: [#FED7E1]{style="background-color:#FED7E1;"};  
+  
+[\$body-bg]{.brown}: [white]{style="background-color:white;"};  
+[\$body-color]{.brown}: [black]{style="background-color:black; color:white;"};  
+[\$link-color]{.brown}: $theme-purple;  
+[\$selection-bg]{.brown}:  $theme-pink;  
+
+.blue {  
+\ \ color: $theme-blue;  
+}  
+
+.teal {  
+\ \ color: $theme-teal;  
+}  
+</div>
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+<iframe class="slide-deck" src="palette.html"></iframe>
+:::
+:::
+:::
+
+## Doing a lot with a little {.dull}
+
+Colors, sizes, and fonts are fundamental aspects to consider when creating slides. They significantly impact the effectiveness of your presentation. Colors hold the power to communicate emotions and set a specific tone. Carefully chosen color schemes can draw attention to important points and create a memorable visual experience. Warm colors like red and orange can evoke energy and enthusiasm, while cool tones like blue and green encourage calmness and trust.
+
+Sizes play a pivotal role in visual hierarchy. By varying the sizes of headings, subheadings, and bullet points, you can guide the audience's focus and enhance comprehension. Important details can be emphasized with larger text or visuals, while less significant information can be presented in smaller sizes. Organized and well-sized elements facilitate better understanding and retention of the main messages.
+
+Fonts are also essential in slide design. The right font choice improves readability and reinforces the overall theme or tone of your presentation. Clean and modern designs often use sans-serif fonts such as Helvetica or Arial, while serif fonts like Times New Roman or Georgia can convey a more traditional and reliable feel. It is advisable to limit the number of fonts used, maintaining consistency and avoiding visual overload. Carefully selecting appropriate fonts enhances legibility and the overall visual impact.
+
+To summarize, colors, sizes, and fonts are crucial elements in slide design, directly influencing the effectiveness and visual appeal of your presentation. By giving careful consideration to these aspects, you can engage your audience, effectively communicate your message, and leave a lasting impression.
+
+::: footer
+Text generated with [gPT3.5-Chatbot](https://echatgpt.org/chat)
+:::
+
+## {.red2-full}
+
+::: columns
+::: {.column width="50%"}
+
+<br> <br> <br>
+
+[Doing a lot with a little]{style="font-size:1.5em"}
+
+<br> <br>
+
+you want to work with
+:::
+
+::: {.column width="50%"}
+
+<br> 
+
+::: {style="font-size:3em;"}
+
+colors
+
+sizes
+
+fonts
+
+:::
+
+:::
+:::
+
+## {background-image="images/markus-spiske.jpg"}
+
+::: {.absolute left="55%" top="35%" style="color:#6A2434; font-size:2.5em;"}
+Positioning
+
+matters!
+:::
+
+::: footer
+Photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/closeup-photo-of-red-ball-ornament-on-surface-AF_4tBQjdtc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+## {background-image="images/markus-spiske.jpg"}
+
+::: columns
+::: {.column width="50%"}
+
+:::
+
+::: {.column width="50%"}
+<br><br><br>
+
+`````markdown
+## {background-image="images/markus-spiske.jpg"}
+
+::: {.absolute left="55%" top="35%" style="color:#6A2434; font-size:2.5em;"}
+Positioning
+
+matters!
+:::
+`````
+:::
+:::
+
+::: footer
+Photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/closeup-photo-of-red-ball-ornament-on-surface-AF_4tBQjdtc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+## {background-image="images/markus-spiske.jpg"}
+
+::: {.absolute left="45%" top="25%" style="color:#6A2434; font-size:2.5em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .15); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); border-radius: 5px;"}
+Positioning
+
+matters!
+:::
+
+::: footer
+Photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/closeup-photo-of-red-ball-ornament-on-surface-AF_4tBQjdtc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+## {background-image="images/markus-spiske.jpg"}
+
+::: columns
+::: {.column width="50%"}
+
+:::
+
+::: {.column width="50%"}
+<br> <br>
+
+```css
+.frosted {
+  color:#6A2434; 
+  font-size:2.5em; 
+  padding: 0.5em 1em; 
+  background-color: rgba(255, 255, 255, .15); 
+  backdrop-filter: blur(5px); 
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 5px;
+}
+```
+:::
+:::
+
+::: footer
+Photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/closeup-photo-of-red-ball-ornament-on-surface-AF_4tBQjdtc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
+
+
+
+
+## Creating slide classes {.red}
+
+::: {.codewindow .sass}
+style.scss
+
+<div>
+$theme-blue: #394D85;
+
+@mixin background-full {  
+\ \ background-size: cover;  
+\ \ background-position: center;  
+\ \ background-repeat: no-repeat;  
+}
+
+.theme-slide2 {  
+\ \ &:is(.slide-background) {  
+\ \ \ \ background-image: url('../../../../../assets/slide2.svg');  
+\ \ \ \ @include background-full;  
+\ \ }  
+\ \ h3 {  
+\ \ \ \ color: $theme-blue;  
+\ \ }  
+\ \ h2, h3, h4, h5, p, pre {  
+\ \ \ \ margin-left: 100px;  
+\ \ }  
+}
+</div>
+:::
+
+## Creating slide classes {.red}
+
+::: {.codewindow .quarto}
+index.qmd
+`````md
+---
+format: 
+  revealjs:
+    theme: style.scss
+---
+
+## Amazing Title {.theme-title1 .center}
+
+## Welcome! {.theme-slide1}
+
+## Getting started {.theme-section2 .center}
+
+## Install R {.theme-slide3}
+
+## Try to install Python {.theme-slide3}
+`````
+:::
+
+## {.red}
+
+<iframe class="slide-deck" style="height:800px; max-width: 100%;" src="earth/index.html"></iframe>
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: footer
+<https://github.com/EmilHvitfeldt/quarto-revealjs-earth>
+:::
+
+## {.red}
+
+<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="letterbox/index.html"></iframe>
+
+::: footer
+<https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox>
+:::
+
+## Fragments {.green4-right}
+
+::: columns
+::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+```md
+---
+format: revealjs
+---
+
+::: {.fragment}
+Fade in
+:::
+
+::: {.fragment .fade-out}
+Fade out
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+```
+:::
+:::
+
+::: {.column width="50%"}
+<iframe class="slide-deck" src="fragment.html"></iframe>
+:::
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: footer
+<https://quarto.org/docs/presentations/revealjs/advanced.html#fragments>
+:::
+
+## Custom fragments {.green}
+
+::: {.codewindow .sass}
+styles.scss
+
+<div>
+.reveal .slides section .fragment.[highlight-orange]{.blue} {  
+\ \ [opacity: 1;]{.teal}  
+\ \ [visibility: inherit]{.teal}  
+}
+
+.reveal .slides section .fragment.[highlight-orange]{.blue}.visible {  
+\ \ [background-color: $theme-orange;]{.teal}  
+}
+</div>
+:::
+
+::: {.fragment}
+<iframe class="slide-deck" style="height:300px; max-width: 100%;" src="fragment_custom.html"></iframe>
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+## Revealjs API {.red}
+
+```js
+// Relative navigation
+Reveal.left();
+Reveal.right();
+Reveal.up();
+Reveal.down();
+Reveal.prev();
+Reveal.next();
+
+// Returns an object with the scaled 
+// presentationWidth & presentationHeight
+Reveal.getComputedSlideSize();
+
+Reveal.getCurrentSlide();
+
+Reveal.getProgress();
+```
+
+::: footer
+<https://revealjs.com/api/>
+:::
+
+## Revealjs Events {.red}
+
+```js
+Reveal.on( 'slidechanged', event => {
+  // event.previousSlide, event.currentSlide
+} );
+
+Reveal.on( 'resize', event => {
+  // event.scale, event.oldScale, event.size
+} );
+```
+
+<br>
+
+```js
+Reveal.on( 'fragmentshown', event => {
+  // event.fragment = the fragment DOM element
+} );
+Reveal.on( 'fragmenthidden', event => {
+  // event.fragment = the fragment DOM element
+} );
+```
+
+::: footer
+<https://revealjs.com/api/>
+:::
+
+## fragments with javascript {.red}
+
+```js
+Reveal.on( 'fragmentshown', event => {  
+  if (event.fragment.classList.contains("advance-slide")) {  
+    Reveal  
+      .getCurrentSlide().querySelector("iframe")  
+      .contentWindow.Reveal.right()  
+  }  
+} );  
+
+Reveal.on( 'fragmenthidden', event => {  
+  if (event.fragment.classList.contains("advance-slide")) {  
+    Reveal  
+      .getCurrentSlide().querySelector("iframe")  
+      .contentWindow.Reveal.left()  
+  }  
+} );  
+```
+
+## fragments with javascript {.red}
+
+::: {.codewindow .quarto}
+index.qmd
+```md
+---
+format:
+  revealjs: 
+    include-after-body: 
+      - "custom-fragments.html"
+---
+
+<iframe class="slide-deck" src="basics.html"></iframe>
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+```
+:::
+
+## {.center background-image="images/sixteen-miles.png"}
+
+::: columns
+::: {.column widtd="55%"}
+:::
+::: {.column width="45%" style="text-align:right;"}
+[Thank you]{.r-fit-text style="color:white;"}
+
+<br>
+
+[Slidecraft 101 blog series at emilhvitfeldt.com](https://www.emilhvitfeldt.com/blog.html#category=slidecraft%20101)
+
+:::
+:::
+
+::: footer
+Photo by <a href="https://unsplash.com/@sixteenmilesout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sixteen Miles Out</a> on <a href="https://unsplash.com/photos/lighted-candle-in-dark-room-3CA_-xcpulY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
